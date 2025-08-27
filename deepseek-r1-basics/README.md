@@ -14,8 +14,19 @@
 curl -fsSL https://ollama.com/install.sh | sh
 ```
 
+* Run model standalone
 ```
 ollama pull deepseek-r1:1.5b
 ollama run deepseek-r1:1.5b
+```
+
+* Install other model
+```
+ollama pull qwen2.5:1.5b
+```
+
+* Run python poc
+```
+python3 poc_r1_vs_baseline.py
 ```
 
