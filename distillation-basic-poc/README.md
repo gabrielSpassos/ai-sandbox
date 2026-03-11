@@ -117,5 +117,21 @@ python3 main.py
 ## Output
 
 ```
+Training teacher...
+Teacher epoch 1, loss=191.053
+Teacher epoch 2, loss=81.167
+Teacher epoch 3, loss=57.102
+Teacher epoch 4, loss=41.849
+Teacher epoch 5, loss=35.667
 
+Training student with distillation...
+Student epoch 1, loss=1326.734
+Student epoch 2, loss=386.476
+Student epoch 3, loss=232.254
+Student epoch 4, loss=172.207
+Student epoch 5, loss=142.024
+
+Evaluation:
+Teacher accuracy: 97.93%
+Student accuracy: 97.58%
 ```
