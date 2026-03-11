@@ -118,20 +118,30 @@ python3 main.py
 
 ```
 Training teacher...
-Teacher epoch 1, loss=191.053
-Teacher epoch 2, loss=81.167
-Teacher epoch 3, loss=57.102
-Teacher epoch 4, loss=41.849
-Teacher epoch 5, loss=35.667
+Teacher epoch 1, loss=191.823
+Teacher epoch 2, loss=80.270
+Teacher epoch 3, loss=56.000
+Teacher epoch 4, loss=44.736
+Teacher epoch 5, loss=33.361
 
 Training student with distillation...
-Student epoch 1, loss=1326.734
-Student epoch 2, loss=386.476
-Student epoch 3, loss=232.254
-Student epoch 4, loss=172.207
-Student epoch 5, loss=142.024
+Student epoch 1, loss=1336.006
+Student epoch 2, loss=383.968
+Student epoch 3, loss=230.685
+Student epoch 4, loss=172.994
+Student epoch 5, loss=142.645
 
 Evaluation:
-Teacher accuracy: 97.93%
-Student accuracy: 97.58%
+
+Teacher evaluation:
+Accuracy: 97.87%
+Parameters: 535,818
+Model size: 2.15 MB
+Latency: 0.2138 ms/sample
+
+Student evaluation:
+Accuracy: 97.60%
+Parameters: 101,770
+Model size: 0.41 MB
+Latency: 0.2908 ms/sample
 ```
