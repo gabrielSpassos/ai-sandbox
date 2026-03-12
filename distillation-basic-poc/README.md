@@ -118,30 +118,45 @@ python3 main.py
 
 ```
 Training teacher...
-Teacher epoch 1, loss=191.823
-Teacher epoch 2, loss=80.270
-Teacher epoch 3, loss=56.000
-Teacher epoch 4, loss=44.736
-Teacher epoch 5, loss=33.361
+Teacher epoch 1, loss=190.393
+Teacher epoch 2, loss=80.732
+Teacher epoch 3, loss=56.475
+Teacher epoch 4, loss=43.602
+Teacher epoch 5, loss=34.902
 
 Training student with distillation...
-Student epoch 1, loss=1336.006
-Student epoch 2, loss=383.968
-Student epoch 3, loss=230.685
-Student epoch 4, loss=172.994
-Student epoch 5, loss=142.645
+Student epoch 1, loss=2006.872
+Student epoch 2, loss=558.022
+Student epoch 3, loss=352.763
+Student epoch 4, loss=269.218
+Student epoch 5, loss=225.723
+Student epoch 6, loss=198.993
+Student epoch 7, loss=181.262
+Student epoch 8, loss=166.299
+Student epoch 9, loss=156.724
+Student epoch 10, loss=148.099
+Student epoch 11, loss=140.783
+Student epoch 12, loss=135.527
+Student epoch 13, loss=130.434
+Student epoch 14, loss=126.409
+Student epoch 15, loss=123.616
+Student epoch 16, loss=120.076
+Student epoch 17, loss=117.515
+Student epoch 18, loss=115.142
+Student epoch 19, loss=112.097
+Student epoch 20, loss=111.278
 
 Evaluation:
 
 Teacher evaluation:
-Accuracy: 97.87%
+Accuracy: 97.69%
 Parameters: 535,818
 Model size: 2.15 MB
-Latency: 0.2138 ms/sample
+Latency: 0.3167 ms/sample
 
 Student evaluation:
-Accuracy: 97.60%
+Accuracy: 97.46%
 Parameters: 101,770
 Model size: 0.41 MB
-Latency: 0.2908 ms/sample
+Latency: 0.2535 ms/sample
 ```
