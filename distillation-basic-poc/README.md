@@ -130,7 +130,8 @@ The goal is to maintain the smaller model performance as close possible to the t
 
 ## Resources
 
-* https://www.youtube.com/watch?v=h7DUpHPasME
+* youtube video: https://www.youtube.com/watch?v=h7DUpHPasME
+* paper: https://arxiv.org/pdf/1503.02531
 
 ## Run POC
 
