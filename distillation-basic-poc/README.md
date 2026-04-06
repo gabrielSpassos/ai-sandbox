@@ -1,24 +1,47 @@
-# AI Distillation Basic POC
+# LLM Distillation POC
 
 ## What is?
 
-Machine Learning technique, where a *simplier, smaller model (studant)* is trained to replicate the behavior of a *larger, more complex model (teacher)*, studant learns from the *teacher’s predictions* which contains richer information (often called soft targets).
+Process of transferring knowledge from a larger (often more complex) model (teacher) to a smaller, more efficient model (student)
 
-The target is *retain most of teacher model's performance while reducing size, latency, and compute cost*
+Large and Small is a Meassure in terms of parameters
+
+Concept of 2015, from paper Distilling the Knowledge in Neural Network
+
+The goal is to maintain the smaller model performance as close possible to the teacher model, while reducing the computation resources.
 
 ## How it works?
 
-1. Train or obtain a powerful teacher model (large neural network, ensemble, or foundation model).
-2. Run data through the teacher to produce probability distributions or outputs.
-3. Train a student model to match those outputs (not just the correct label).
-4. Deploy the smaller student model.
+1. Teacher model generate soft labels
+   - Soft lables: 
+        - teacher models outputs the probability distributions over possible answers
+        - this allows studant model understand confidence levels rather than just right and wrong
+2. Besides train with soft labels, the studant models learns from the ground truth
+3. These two training tecniques help the student capture the reasoning patterns of teacher
+4. Student also can be fine-tuned on task specific data sets
+    - helps to perform well in real word applications even if its much smaller than the teacher
 
-## Pros
+## Why use LLM distillation (Pros)
+1. Efficiency
+    - smaller llms require less computational power, fits for edge devides or low latency applications
+2. Cost savings
+    - with efficiency has reduce resource consumption leads to lower inference in operational cost
+3. Scalability 
+    - with efficiency can scale up to more user to taks with less need of massive infrastrucute
+
+#### Pros
 - Smaller and faster
 - Cheaper to deploy
 - Often robust
 
-## Cons
+## Challenges (Cons)
+
+1. Information loss
+    - the smaller model might not fully capture the nuances of the teacher
+2. Ensure Generalization
+    - if the student generalizes well across diverse taks or domains
+
+#### Cons
 - Some accuracy loss is common
 - Requires a strong teacher model
 - Training pipeline becomes more complex
@@ -95,6 +118,15 @@ The target is *retain most of teacher model's performance while reducing size, l
         - Financial risk analyzer
 
     The teacher provides broad knowledge; the student becomes efficient and specialized.
+
+#### Real Word cases
+
+- DistillBERT
+    - distilled from Bert, develop by Google
+    - 40% smaller, 60% faster and 97% performance of Bert
+- DistillGPT-2
+    - Distilled from gpt2, from open AI
+    - 35~40% smaller, 50% faster, and 95~97% performance of gpt2
 
 ## Run POC
 
