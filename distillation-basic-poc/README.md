@@ -128,6 +128,10 @@ The goal is to maintain the smaller model performance as close possible to the t
     - Distilled from gpt2, from open AI
     - 35~40% smaller, 50% faster, and 95~97% performance of gpt2
 
+## Resources
+
+* https://www.youtube.com/watch?v=h7DUpHPasME
+
 ## Run POC
 
 * Configure venv
