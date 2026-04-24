@@ -28,6 +28,7 @@ The goal is to maintain the smaller model performance as close possible to the t
     - with efficiency has reduce resource consumption leads to lower inference in operational cost
 3. Scalability 
     - with efficiency can scale up to more user to taks with less need of massive infrastrucute
+4. Decoupling to train with bigger models but deploy with smaller and faster models
 
 #### Pros
 - Smaller and faster
