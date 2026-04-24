@@ -10,12 +10,20 @@ Concept of 2015, from paper Distilling the Knowledge in Neural Network
 
 The goal is to maintain the smaller model performance as close possible to the teacher model, while reducing the computation resources.
 
+Temperature:
+    - today: 
+        - llm creativity knob
+            - high temperature means more surprising LLM outputs
+    - Originally:
+        - amplify dark knowledge by artifically increase the probabilities of the wrong lables 
 ## How it works?
 
 1. Teacher model generate soft labels
    - Soft lables: 
         - teacher models outputs the probability distributions over possible answers
         - this allows studant model understand confidence levels rather than just right and wrong
+        - dark knowlegde
+            - knowlegde about what the input is not.
 2. Besides train with soft labels, the studant models learns from the ground truth
 3. These two training tecniques help the student capture the reasoning patterns of teacher
 4. Student also can be fine-tuned on task specific data sets
@@ -31,6 +39,7 @@ The goal is to maintain the smaller model performance as close possible to the t
 4. Decoupling to train with bigger models but deploy with smaller and faster models
 
 #### Pros
+- Enables decoupling, meaning can use huge models for training and deploy 
 - Smaller and faster
 - Cheaper to deploy
 - Often robust
@@ -43,9 +52,10 @@ The goal is to maintain the smaller model performance as close possible to the t
     - if the student generalizes well across diverse taks or domains
 
 #### Cons
+- Requires that the teacher be a white box (access the probability distributions)
+- Training pipeline becomes more complex and more expensive
 - Some accuracy loss is common
 - Requires a strong teacher model
-- Training pipeline becomes more complex
 
 ## Code
 
