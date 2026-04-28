@@ -2,6 +2,8 @@
 
 ## What is?
 
+While training from diverse data and increasing the number of parameters produces powerful models, real-world application becomes challenging. Deploying larger and larger models to edge devices like mobile phones and smart devices becomes difficult because of their intensive computational requirements and costs. 
+
 Process of transferring knowledge from a larger (often more complex) model (teacher) to a smaller, more efficient model (student)
 
 Large and Small is a Meassure in terms of parameters
