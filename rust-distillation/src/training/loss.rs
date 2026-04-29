@@ -12,7 +12,10 @@ pub fn distillation_loss(
     let student_log_probs = (student_logits / t).log_softmax(-1, Kind::Float);
     let teacher_probs = (teacher_logits / t).softmax(-1, Kind::Float);
 
-    let kl = -(teacher_probs * student_log_probs).sum(Kind::Float);
+    let kl = -(teacher_probs * student_log_probs)
+        .sum_dim_intlist([-1].as_ref(), false, Kind::Float)
+        .mean(Kind::Float);
+
     let ce = student_logits.cross_entropy_for_logits(labels);
 
     alpha * ce + (1.0 - alpha) * kl * (t * t)

@@ -1,17 +1,31 @@
 use tch::Tensor;
 
 pub struct DataLoader {
-    images: Tensor,
-    labels: Tensor,
-    batch_size: i64,
-    index: i64,
+    pub images: Tensor,
+    pub labels: Tensor,
+    pub batch_size: i64,
+    pub index: i64,
 }
 
-pub fn create_dataloader(dataset: super::dataset::Dataset, config: &crate::config::Config) -> DataLoader {
-    DataLoader {
-        images: dataset.images,
-        labels: dataset.labels,
-        batch_size: config.batch_size as i64,
-        index: 0,
+impl DataLoader {
+    pub fn next_batch(&mut self) -> Option<(Tensor, Tensor)> {
+        let total = self.images.size()[0];
+
+        if self.index >= total {
+            return None;
+        }
+
+        let end = (self.index + self.batch_size).min(total);
+
+        let imgs = self.images.narrow(0, self.index, end - self.index);
+        let lbls = self.labels.narrow(0, self.index, end - self.index);
+
+        self.index = end;
+
+        Some((imgs, lbls))
+    }
+
+    pub fn reset(&mut self) {
+        self.index = 0;
     }
 }
