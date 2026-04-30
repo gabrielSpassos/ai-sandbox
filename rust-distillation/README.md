@@ -16,6 +16,7 @@ cargo run
 
 # Output
 
+* alfa = 0.5
 ```
 Knowledge Distillation!
 Train dataset shape: [60000, 1, 28, 28]
@@ -31,4 +32,21 @@ Epoch 3 avg loss: 1.9203 | accuracy: 97.53%
 Epoch 4
 Epoch 4 avg loss: 1.8605 | accuracy: 98.08%
 Test accuracy: 97.39%
+```
+
+* alfa - 1.0 (without destillation)
+```
+Train dataset shape: [60000, 1, 28, 28]
+Test dataset shape: [10000, 1, 28, 28]
+Epoch 0
+Epoch 0 avg loss: 0.3115 | accuracy: 91.24%
+Epoch 1
+Epoch 1 avg loss: 0.1475 | accuracy: 95.63%
+Epoch 2
+Epoch 2 avg loss: 0.1033 | accuracy: 96.92%
+Epoch 3
+Epoch 3 avg loss: 0.0776 | accuracy: 97.70%
+Epoch 4
+Epoch 4 avg loss: 0.0600 | accuracy: 98.25%
+Test accuracy: 96.79%
 ```

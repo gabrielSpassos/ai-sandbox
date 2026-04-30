@@ -14,7 +14,7 @@ impl Default for Config {
             epochs: 5,
             learning_rate: 1e-3,
             temperature: 3.0,
-            alpha: 0.5,
+            alpha: 1.0,
             teacher_path: "models/teacher.pt".into(),
         }
     }
