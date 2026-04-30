@@ -33,7 +33,7 @@ fn main() -> Result<()> {
 
     training::trainer::train(&config, &teacher, &mut student, dataloader)?;
 
-    training::eval::evaluate(&student, &dataset.test_images, &dataset.test_labels);
+    eval::metrics::evaluate(&student, &dataset.test_images, &dataset.test_labels);
 
     Ok(())
 }

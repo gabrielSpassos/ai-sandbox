@@ -5,7 +5,7 @@ pub struct Student {
     pub net: Box<dyn nn::Module>,
 }
 
-pub fn build_student(config: &crate::config::Config, device: Device) -> Student {
+pub fn build_student(_config: &crate::config::Config, device: Device) -> Student {
     let vs = nn::VarStore::new(device);
     let root = &vs.root();
 

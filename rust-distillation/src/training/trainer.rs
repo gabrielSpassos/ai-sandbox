@@ -1,5 +1,5 @@
 use anyhow::Result;
-use tch::{nn, nn::OptimizerConfig, Kind};
+use tch::{nn, nn::OptimizerConfig};
 
 pub fn train(
     config: &crate::config::Config,
