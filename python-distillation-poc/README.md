@@ -168,45 +168,72 @@ python3 main.py
 
 ```
 Training teacher...
-Teacher epoch 1, loss=190.393
-Teacher epoch 2, loss=80.732
-Teacher epoch 3, loss=56.475
-Teacher epoch 4, loss=43.602
-Teacher epoch 5, loss=34.902
+Teacher epoch 1, loss=191.692
+Teacher epoch 2, loss=81.328
+Teacher epoch 3, loss=57.390
+Teacher epoch 4, loss=43.437
+Teacher epoch 5, loss=36.044
 
 Training student with distillation...
-Student epoch 1, loss=2006.872
-Student epoch 2, loss=558.022
-Student epoch 3, loss=352.763
-Student epoch 4, loss=269.218
-Student epoch 5, loss=225.723
-Student epoch 6, loss=198.993
-Student epoch 7, loss=181.262
-Student epoch 8, loss=166.299
-Student epoch 9, loss=156.724
-Student epoch 10, loss=148.099
-Student epoch 11, loss=140.783
-Student epoch 12, loss=135.527
-Student epoch 13, loss=130.434
-Student epoch 14, loss=126.409
-Student epoch 15, loss=123.616
-Student epoch 16, loss=120.076
-Student epoch 17, loss=117.515
-Student epoch 18, loss=115.142
-Student epoch 19, loss=112.097
-Student epoch 20, loss=111.278
+
+=== Soft vs Hard Labels Debug ===
+
+Sample 0
+Hard label: 9
+Teacher prediction: 9
+Top-3 soft probabilities:
+  Class 9 → 0.9133
+  Class 4 → 0.0617
+  Class 3 → 0.0095
+
+Sample 1
+Hard label: 1
+Teacher prediction: 1
+Top-3 soft probabilities:
+  Class 1 → 0.9594
+  Class 4 → 0.0137
+  Class 2 → 0.0092
+
+Sample 2
+Hard label: 2
+Teacher prediction: 2
+Top-3 soft probabilities:
+  Class 2 → 0.6697
+  Class 1 → 0.1022
+  Class 0 → 0.0667
+[INFO] Plot saved to logs/plots/epoch_0_batch_0.png
+Student epoch 1, loss=1895.242
+Student epoch 2, loss=510.858
+Student epoch 3, loss=313.412
+Student epoch 4, loss=239.274
+Student epoch 5, loss=202.822
+Student epoch 6, loss=181.390
+Student epoch 7, loss=165.488
+Student epoch 8, loss=153.401
+Student epoch 9, loss=144.584
+Student epoch 10, loss=137.545
+Student epoch 11, loss=131.838
+Student epoch 12, loss=127.247
+Student epoch 13, loss=122.947
+Student epoch 14, loss=118.596
+Student epoch 15, loss=115.497
+Student epoch 16, loss=112.235
+Student epoch 17, loss=109.671
+Student epoch 18, loss=107.278
+Student epoch 19, loss=105.911
+Student epoch 20, loss=103.097
 
 Evaluation:
 
 Teacher evaluation:
-Accuracy: 97.69%
+Accuracy: 97.92%
 Parameters: 535,818
 Model size: 2.15 MB
-Latency: 0.3167 ms/sample
+Latency: 0.2343 ms/sample
 
 Student evaluation:
-Accuracy: 97.46%
+Accuracy: 97.48%
 Parameters: 101,770
 Model size: 0.41 MB
-Latency: 0.2535 ms/sample
+Latency: 0.2200 ms/sample
 ```
