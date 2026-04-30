@@ -22,11 +22,11 @@ pub fn train(
         let mut total_samples = 0.0;
 
         while let Some((images, labels)) = dataloader.next_batch() {
+            let images_teacher = images.copy();
+            let images_student = images.view([-1, 28 * 28]);
 
-            let images = images.view([-1, 28 * 28]);
-
-            let student_logits = student.net.forward(&images);
-            let teacher_logits = teacher.forward_ts(&[images.copy()])?;
+            let student_logits = student.net.forward(&images_student);
+            let teacher_logits = teacher.forward_ts(&[images_teacher])?;
 
             let loss = crate::training::loss::distillation_loss(
                 &student_logits,
@@ -39,12 +39,11 @@ pub fn train(
             total_loss += loss.double_value(&[]);
             batches += 1;
 
-            // Accuracy calculation
             let preds = student_logits.argmax(-1, false);
             let correct = preds
                 .eq_tensor(&labels)
-                .to_kind(Kind::Float)
-                .sum(Kind::Float);
+                .to_kind(tch::Kind::Float)
+                .sum(tch::Kind::Float);
 
             total_correct += correct.double_value(&[]);
             total_samples += labels.size()[0] as f64;

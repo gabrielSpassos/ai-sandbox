@@ -212,4 +212,7 @@ rust-project.json
 .history
 .ionide
 
+MNIST/
+models/
+
 # End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,rust,rust-analyzer,python

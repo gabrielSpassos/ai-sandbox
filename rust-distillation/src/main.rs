@@ -17,10 +17,13 @@ fn main() -> Result<()> {
 
     let device = utils::device::get_device();
 
-    let dataset = data::dataset::load_dataset(&config)?;
+    let dataset = data::dataset::load_dataset()?;
+    println!("Train dataset shape: {:?}", dataset.train_images.size());
+    println!("Test dataset shape: {:?}", dataset.test_images.size());
+
     let dataloader = data::dataloader::DataLoader {
-        images: dataset.images,
-        labels: dataset.labels,
+        images: dataset.train_images,
+        labels: dataset.train_labels,
         batch_size: config.batch_size as i64,
         index: 0,
     };
@@ -28,14 +31,9 @@ fn main() -> Result<()> {
     let teacher = models::teacher::load_teacher(&config, device)?;
     let mut student = models::student::build_student(&config, device);
 
-    training::trainer::train(
-        &config,
-        &teacher,
-        &mut student,
-        dataloader,
-    )?;
+    training::trainer::train(&config, &teacher, &mut student, dataloader)?;
 
-    eval::metrics::evaluate(&student, &config)?;
+    training::eval::evaluate(&student, &dataset.test_images, &dataset.test_labels);
 
     Ok(())
 }
