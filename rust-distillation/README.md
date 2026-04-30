@@ -50,3 +50,12 @@ Epoch 4
 Epoch 4 avg loss: 0.0600 | accuracy: 98.25%
 Test accuracy: 96.79%
 ```
+
+## Todos
+
+temperature = 2.0
+temperature = 4.0
+* affects softness of teacher signal
+
+alpha = 0.3  // more teacher influence
+alpha = 0.7  // more label influence
