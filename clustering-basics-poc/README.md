@@ -19,18 +19,37 @@ recommendation systems, document organization, anomaly detection, and semantic s
 "Sushi place"
 "Burger delivery"
 "Full stack developer"
+"Pasta recipe"
 ```
 
 ## Output
 ```
-Cluster 1 -> Italian food
-Cluster 0 -> Java developer
-Cluster 1 -> Pizza restaurant
-Cluster 0 -> Senior backend engineer
-Cluster 0 -> Spring Boot developer
-Cluster 1 -> Sushi place
-Cluster 1 -> Burger delivery
-Cluster 0 -> Full stack developer
+Clustered texts:
+
+Cluster 0 -> Italian food
+Cluster 1 -> Java developer
+Cluster 0 -> Pizza restaurant
+Cluster 1 -> Senior backend engineer
+Cluster 1 -> Spring Boot developer
+Cluster 0 -> Sushi place
+Cluster 0 -> Burger delivery
+Cluster 1 -> Full stack developer
+Cluster 0 -> Pasta recipe
+
+Grouped clusters:
+
+Cluster 0:
+- Italian food
+- Pizza restaurant
+- Sushi place
+- Burger delivery
+- Pasta recipe
+
+Cluster 1:
+- Java developer
+- Senior backend engineer
+- Spring Boot developer
+- Full stack developer
 ```
 
 ### Usage
