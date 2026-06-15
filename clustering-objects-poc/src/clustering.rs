@@ -1,8 +1,9 @@
+use crate::loan_contract::LoanContract;
+use crate::normalization::min_max_scale;
+
 use linfa::prelude::*;
 use linfa_clustering::KMeans;
 use ndarray::Array2;
-
-use crate::loan_contract::LoanContract;
 
 pub fn cluster_contracts(
     contracts: &[LoanContract],
@@ -11,19 +12,24 @@ pub fn cluster_contracts(
 
     let features: Vec<f64> = contracts
         .iter()
-        .flat_map(|contract| {
+        .flat_map(|c| {
             vec![
-                contract.amount,
-                contract.days_remaining as f64,
+                c.amount,
+                c.interest_rate,
+                c.monthly_payment,
+                c.days_remaining as f64,
+                c.loan_term_months as f64,
             ]
         })
         .collect();
 
-    let dataset = Array2::from_shape_vec(
-        (contracts.len(), 2),
+    let mut dataset = Array2::from_shape_vec(
+        (contracts.len(), 5),
         features,
     )
     .unwrap();
+
+    min_max_scale(&mut dataset);
 
     let dataset = DatasetBase::from(dataset);
 

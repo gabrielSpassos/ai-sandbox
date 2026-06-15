@@ -1,6 +1,7 @@
 mod clustering;
 mod data;
 mod loan_contract;
+mod normalization;
 
 use std::collections::HashMap;
 
@@ -10,7 +11,7 @@ use data::sample_contracts;
 fn main() {
     let contracts = sample_contracts();
 
-    let labels = cluster_contracts(&contracts, 2);
+    let labels = cluster_contracts(&contracts, 4);
 
     let mut grouped: HashMap<usize, Vec<_>> = HashMap::new();
 
