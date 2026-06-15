@@ -5,7 +5,6 @@ pub fn min_max_scale(data: &mut Array2<f64>) {
     let cols = data.ncols();
 
     for col in 0..cols {
-
         let column = data.column(col);
 
         let min = column
@@ -23,7 +22,6 @@ pub fn min_max_scale(data: &mut Array2<f64>) {
         }
 
         for row in 0..data.nrows() {
-
             data[[row, col]] =
                 (data[[row, col]] - min) / range;
         }

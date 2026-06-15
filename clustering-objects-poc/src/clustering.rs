@@ -23,11 +23,7 @@ pub fn cluster_contracts(
         })
         .collect();
 
-    let mut dataset = Array2::from_shape_vec(
-        (contracts.len(), 5),
-        features,
-    )
-    .unwrap();
+    let mut dataset = Array2::from_shape_vec((contracts.len(), 5), features,).unwrap();
 
     min_max_scale(&mut dataset);
 
