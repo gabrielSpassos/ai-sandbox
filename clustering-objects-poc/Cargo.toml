@@ -1,0 +1,10 @@
+[package]
+name = "clustering-objects-poc"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+linfa = "0.7"
+linfa-clustering = "0.7"
+ndarray = "0.15"
+anyhow = "1"
