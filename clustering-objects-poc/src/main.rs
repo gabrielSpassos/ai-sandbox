@@ -2,7 +2,9 @@ mod clustering;
 mod data;
 mod loan_contract;
 mod normalization;
+mod analytics;
 
+use analytics::print_cluster_summary;
 use std::collections::HashMap;
 
 use clustering::cluster_contracts;
@@ -23,17 +25,22 @@ fn main() {
     }
 
     for (cluster, contracts) in grouped {
+        print_cluster_summary(cluster, &contracts);
+
         println!();
         println!("Cluster {}", cluster);
         println!("----------------");
 
         for contract in contracts {
             println!(
-                "id={} borrower={} amount={} days={}",
+                "id={} borrower={} amount={} interest={} monthly={} days={} term={}",
                 contract.contract_id,
                 contract.borrower,
                 contract.amount,
-                contract.days_remaining
+                contract.interest_rate,
+                contract.monthly_payment,
+                contract.days_remaining,
+                contract.loan_term_months,
             );
         }
     }
