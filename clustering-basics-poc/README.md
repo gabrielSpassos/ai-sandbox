@@ -1,5 +1,7 @@
 # Clustering Basics POC
 
+> Have working code and do a demo - explain the concepts
+
 ## What is clustering
 
 Clustering is an unsupervised machine learning technique that automatically groups similar data points together based on patterns or semantic similarity.

@@ -1,5 +1,7 @@
 # Clustering Objects POC
 
+> Have working code and do a demo - explain the concepts
+
 ## Inputs
 * [data](https://github.com/gabrielSpassos/ai-sandbox/blob/main/clustering-objects-poc/src/data.rs)
 
