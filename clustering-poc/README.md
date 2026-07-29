@@ -88,3 +88,9 @@ pip3 install --upgrade pip
 ./run-dependency.sh
 ./run-test.sh
 ```
+
+## APIS
+
+* http://127.0.0.1:8000/health
+* http://127.0.0.1:8000/topics
+* http://127.0.0.1:8000/documents
