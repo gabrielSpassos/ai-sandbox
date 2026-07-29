@@ -47,10 +47,10 @@ The solution can use the following libraries:
 Create the virtual environment and install the dependencies with the commands below.
 
 ```bash
-python -m venv .venv
+python3 -m venv .venv
 source .venv/bin/activate
-pip install --upgrade pip
-pip install bertopic sentence-transformers umap-learn hdbscan scikit-learn pandas numpy plotly fastapi uvicorn streamlit
+pip3 install --upgrade pip
+pip3 install -r requirements.txt
 ```
 
 If you prefer, you can move these dependencies into a `requirements.txt` file to make the environment easier to reproduce.

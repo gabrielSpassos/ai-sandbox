@@ -1,0 +1,11 @@
+bertopic
+sentence-transformers
+umap-learn
+hdbscan
+scikit-learn
+pandas
+numpy
+plotly
+fastapi
+uvicorn
+streamlit
