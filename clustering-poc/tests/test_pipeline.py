@@ -31,7 +31,7 @@ def test_pipeline_runs(tmp_path, monkeypatch):
         input_path=str(sample_path),
         text_column="text",
         output_dir=str(output_dir),
-        embedding_model="fake-model",
+        embedding_model="ignored-in-test",
         min_cluster_size=2,
         min_samples=1,
         umap_n_neighbors=2,

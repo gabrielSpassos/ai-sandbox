@@ -19,15 +19,14 @@ def build_topic_model(config):
         prediction_data=True,
     )
 
-    topic_model = BERTopic(
-        embedding_model=config.embedding_model,
+    return BERTopic(
+        embedding_model=None,
         umap_model=umap_model,
         hdbscan_model=hdbscan_model,
         top_n_words=config.top_n_words,
         calculate_probabilities=True,
         verbose=True,
     )
-    return topic_model
 
 def fit_topics(topic_model, texts, embeddings=None):
-    return topic_model.fit_transform(texts, embeddings)
+    return topic_model.fit_transform(texts, embeddings=embeddings)
