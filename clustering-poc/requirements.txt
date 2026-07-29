@@ -6,7 +6,9 @@ scikit-learn
 pandas
 numpy
 plotly
-fastapi
+fastapi>=0.115.0
 uvicorn
 streamlit
 pytest
+httpx
+httpx2

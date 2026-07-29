@@ -9,6 +9,7 @@ def build_topic_model(config):
         min_dist=config.umap_min_dist,
         metric=config.umap_metric,
         random_state=config.random_state,
+        n_jobs=1,
     )
 
     hdbscan_model = HDBSCAN(
