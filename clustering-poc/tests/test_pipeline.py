@@ -3,6 +3,10 @@ from pathlib import Path
 from src.config import Config
 from src.pipeline import run_pipeline
 
+class FakeEmbeddingModel:
+    def encode(self, texts, show_progress_bar=False):
+        return [[0.1, 0.2, 0.3] for _ in texts]
+
 def test_pipeline_runs(tmp_path, monkeypatch):
     data_dir = tmp_path / "data"
     output_dir = tmp_path / "output"
@@ -22,19 +26,22 @@ def test_pipeline_runs(tmp_path, monkeypatch):
     sample_path = data_dir / "sample.csv"
     sample.to_csv(sample_path, index=False)
 
-    def fake_config():
-        return Config(
-            input_path=str(sample_path),
-            text_column="text",
-            output_dir=str(output_dir),
-            min_cluster_size=2,
-            min_samples=1,
-            umap_n_neighbors=2,
-            umap_n_components=2,
-            top_n_words=5,
-        )
+    fake_config = Config(
+        input_path=str(sample_path),
+        text_column="text",
+        output_dir=str(output_dir),
+        embedding_model="fake-model",
+        min_cluster_size=2,
+        min_samples=1,
+        umap_n_neighbors=2,
+        umap_n_components=2,
+        top_n_words=5,
+    )
 
-    monkeypatch.setattr("src.pipeline.Config", fake_config)
+    monkeypatch.setattr("src.pipeline.Config", lambda: fake_config)
+    monkeypatch.setattr("src.pipeline.build_embedding_model", lambda model_name: FakeEmbeddingModel())
+    monkeypatch.setattr("src.pipeline.generate_embeddings", lambda model, texts: model.encode(texts))
+
     result = run_pipeline()
 
     assert result["documents"] == 4
