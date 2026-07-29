@@ -76,3 +76,15 @@ The initial architecture can be organized into three layers:
 - **Cluster size distribution** to understand how the data is grouped.
 - **Outlier percentage** to measure noise.
 - **Human topic coherence** to validate real-world usefulness.
+
+## Usage
+
+Create the virtual environment and install the dependencies with the commands below.
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip3 install --upgrade pip
+./run-dependency.sh
+./run-test.sh
+```
