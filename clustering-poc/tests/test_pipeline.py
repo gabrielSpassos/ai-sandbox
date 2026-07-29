@@ -1,3 +1,4 @@
+import numpy as np
 import pandas as pd
 from pathlib import Path
 from src.config import Config
@@ -5,7 +6,7 @@ from src.pipeline import run_pipeline
 
 class FakeEmbeddingModel:
     def encode(self, texts, show_progress_bar=False):
-        return [[0.1, 0.2, 0.3] for _ in texts]
+        return np.array([[0.1, 0.2, 0.3] for _ in texts], dtype=float)
 
 def test_pipeline_runs(tmp_path, monkeypatch):
     data_dir = tmp_path / "data"
