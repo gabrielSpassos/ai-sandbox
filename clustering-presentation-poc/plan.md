@@ -1,4 +1,11 @@
-# Clustering Presentation 
+# Clustering Presentation POC
+
+* Comparing same input against any AIs
+
+- [x] Claude Code Sonnet 5
+- [x] Copilot Think Deeper
+- [X] Gemini 3.1 PRO
+- [X] Chat GPT
 
 ## Input 
 
@@ -23,3 +30,17 @@ source .venv/bin/activate
 ```bash
 pip3 install -r requirements.txt
 ```
+
+## Outputs
+
+### Claude
+
+- More code than others
+
+### Copilot
+
+- Had Code bugs, needed to fix it
+
+### Gemini 
+
+- Output shorther than others
