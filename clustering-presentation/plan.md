@@ -9,3 +9,17 @@ I want to show advanced concepts and deep what is happening under the hood step 
 As output please generate only the jupyter notebook and if need explain the concepts inside the notebook.
 ```
 
+## Setup
+
+* Create virtual env
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+```
+
+* Install dependencies
+
+```bash
+pip3 install -r requirements.txt
+```
