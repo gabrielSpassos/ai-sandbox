@@ -1,4 +1,4 @@
-# Clustering Presentation POC
+# Clustering AI Agents/Models POC
 
 * Comparing same input against any AIs
 
