@@ -1,0 +1,19 @@
+name: Update TOC For claude-certificate
+
+on:
+  push:
+    paths:
+      - 'claude-certificate/**'
+
+permissions:
+  contents: write
+
+jobs:
+  toc:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: technote-space/toc-generator@v4
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TARGET_PATHS: 'claude-certificate/README.md'
