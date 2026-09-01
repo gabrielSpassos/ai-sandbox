@@ -11,6 +11,9 @@
 
 > Store claude certificate studies
 
+### Workflow
+- [workflow](workflow.md)
+
 ### References 
 
 - https://github.com/paullarionov/claude-certified-architect
