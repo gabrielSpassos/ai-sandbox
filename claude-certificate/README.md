@@ -19,7 +19,11 @@
 ### Context Management
 - [context management](context-management.md)
 
+### Code Review
+- [code review](code-review.md)
+
 ### References 
 
 - https://github.com/paullarionov/claude-certified-architect
 - https://leonardosalles.com/blog/claude-certified-architect-study/
+- https://academy.claude.com/courses
