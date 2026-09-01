@@ -15,6 +15,9 @@
 ### Workflow
 - [workflow](workflow.md)
 
+### Context Management
+- [context management](context-management.md)
+
 ### References 
 
 - https://github.com/paullarionov/claude-certified-architect
