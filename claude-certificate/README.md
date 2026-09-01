@@ -4,6 +4,7 @@
 
 - [Claude Certificate](#claude-certificate)
     - [Workflow](#workflow)
+    - [Context Management](#context-management)
     - [References](#references)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
