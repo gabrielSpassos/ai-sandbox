@@ -3,6 +3,7 @@
 **Table of Contents**
 
 - [Claude Certificate](#claude-certificate)
+    - [Workflow](#workflow)
     - [References](#references)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
