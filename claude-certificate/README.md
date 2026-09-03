@@ -7,6 +7,7 @@
     - [Context Management](#context-management)
     - [Code Review](#code-review)
     - [CLAUDE.md](#claudemd)
+    - [Subagents](#subagents)
     - [References](#references)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
