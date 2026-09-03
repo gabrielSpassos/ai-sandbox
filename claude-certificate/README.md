@@ -31,6 +31,9 @@
 ### Subagents
 - [subagents](subagents.md)
 
+### Skills
+- [skills](skills.md)
+
 ### References 
 
 - https://github.com/paullarionov/claude-certified-architect
