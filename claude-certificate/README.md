@@ -6,6 +6,7 @@
     - [Workflow](#workflow)
     - [Context Management](#context-management)
     - [Code Review](#code-review)
+    - [CLAUDE.md](#claudemd)
     - [References](#references)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
