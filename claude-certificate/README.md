@@ -27,6 +27,9 @@
 ### CLAUDE.md
 - [CLAUDE.md](cclaude.md)
 
+### Subagents
+- [subagents](subagents.md)
+
 ### References 
 
 - https://github.com/paullarionov/claude-certified-architect

@@ -5,7 +5,8 @@
 - user can have a project and/or user level CLAUDE.md
 - start a project without CLAUDE.md and include on it what the model keeps asking
 - Include stack, commands, preferences
-
+- reefer project docs with `@`
+    
 #### Comands
 
 - `/init` -> creates CLAUDE.md file based on the project
