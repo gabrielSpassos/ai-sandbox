@@ -35,6 +35,9 @@
 ### Skills
 - [skills](skills.md)
 
+### MCP
+- [MCP](mcp.md)
+
 ### References 
 
 - https://github.com/paullarionov/claude-certified-architect
