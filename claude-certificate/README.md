@@ -39,7 +39,13 @@
 ### MCP
 - [MCP](mcp.md)
 
-### References 
+### Hooks
+- [Hooks](hooks.md)
+
+## Certificates
+- Claude Code 101: https://academy.claude.com/verify/9195b5cc72167fc5b3de7b6fd896c3a1
+
+## References 
 
 - https://github.com/paullarionov/claude-certified-architect
 - https://leonardosalles.com/blog/claude-certified-architect-study/
