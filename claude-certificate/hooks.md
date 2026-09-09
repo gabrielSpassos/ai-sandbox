@@ -11,3 +11,25 @@
 - PostToolUse -> runs after a tool call completes
 - Notification ->  runs when claude sends a notification
 - Stop -> runs when claude finishes responding
+
+#### Sample
+
+```
+<your-project-root>/.claude/settings.json
+```
+
+`settings.json`
+
+```json
+{
+  "hooks": [
+    {
+      "type": "PostToolUse",
+      "matcher": "Edit|MultiEdit|Write",
+      "command": "npx prettier --write \"$CLAUDE_CHANGED_FILES\""
+    }
+  ]
+}
+
+
+```
