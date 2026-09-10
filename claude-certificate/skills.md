@@ -15,6 +15,7 @@
 - `reference.md` for detail material and link it from that skill
     - claude will read only when needed the depth
 - Claude execute scripts in the folder, rather than loading it
+    - `check.sh` could runs all the gates.
 - Keep the claude skill lean, push the hard material to `reference.md` or a script
 
 ### Golden Rule
