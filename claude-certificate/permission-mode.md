@@ -10,6 +10,9 @@
 - Switch modes using shift + tab
     - manual, accept edits, plan, and auto
 
+- classifiers checks intent, not correctness, combine with hooks to confirm that something is actually properly working
+- Only pre-approved tools are allowed, and anything off that list gets auto-denied with no prompt.
+
 #### How Auto-Mode Works
 
 - Hands-Off mode
