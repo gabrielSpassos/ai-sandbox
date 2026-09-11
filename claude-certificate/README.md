@@ -11,6 +11,7 @@
     - [Skills](#skills)
     - [MCP](#mcp)
     - [Hooks](#hooks)
+    - [Permission Modes](#permission-modes)
   - [Certificates](#certificates)
   - [References](#references)
 
