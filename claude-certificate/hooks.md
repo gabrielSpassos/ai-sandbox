@@ -78,5 +78,7 @@
 
 - No JSON
   - 0 -> success
-  - 1 -> error non blocking
+    - plain text is ignored except at: `SessionStart`, `UserPromptSubmit`, `UserPromptExpansion`, text is added in context, makes the state-preserver hook work.
   - 2 -> error blocking
+    - gets error as feedback to claude context
+  - 1, or anything else -> error non blocking
