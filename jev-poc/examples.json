@@ -1,0 +1,22 @@
+[
+  {
+    "id": "duplicate-charge",
+    "message": "I was charged twice for my annual subscription and would like a refund.",
+    "expected_category": "billing"
+  },
+  {
+    "id": "login-failure",
+    "message": "I cannot sign in. The password reset link says it has expired.",
+    "expected_category": "account"
+  },
+  {
+    "id": "api-timeout",
+    "message": "Our API requests have been timing out since this morning.",
+    "expected_category": "technical"
+  },
+  {
+    "id": "partnership-inquiry",
+    "message": "We would like to discuss a partnership with your company.",
+    "expected_category": "other"
+  }
+]
