@@ -13,7 +13,7 @@ from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
 
-API_URL = "https://jevmodel.net/v1/systemone"
+API_URL = "https://api.typesafe.ai/v1/systemone"
 MODEL = "jev-latest"
 CONFIDENCE_THRESHOLD = 0.65
 CATEGORIES = {

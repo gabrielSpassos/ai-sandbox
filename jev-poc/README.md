@@ -1,6 +1,6 @@
 # Jev Support Ticket Classification POC
 
-A small, isolated example that sends a support ticket to the Jev Model API, receives a typed category decision, and routes low-confidence results to manual review.
+A small, isolated example that sends a support ticket to TypeSafe's Jev API, receives a typed category decision, and routes low-confidence results to manual review.
 
 ## Requirements
 
@@ -10,6 +10,8 @@ A small, isolated example that sends a support ticket to the Jev Model API, rece
 The script uses only the Python standard library; no package installation is needed.
 
 ## Setup
+
+Sign in to the [TypeSafe Console](https://console.typesafe.ai/login) and create or copy an API key for your account. Use a TypeSafe API key; keys from other Jev-branded services will not authenticate with this API.
 
 From this directory, copy `.env.example` to `.env` and add your API key:
 
@@ -51,4 +53,4 @@ python3 main.py --threshold 0.75 "I cannot sign in to my account."
 
 This POC asks one `choice` question with four fixed categories: `billing`, `technical`, `account`, and `other`. It does not update a ticketing system or take actions on behalf of a user. The application owns the confidence threshold and sends uncertain or unknown categories to manual review.
 
-The API key is sent from this local script to `https://jevmodel.net/v1/systemone`. Do not use real customer data until your team's privacy and data-handling requirements have been reviewed.
+The API key is sent from this local script to `https://api.typesafe.ai/v1/systemone`. Do not use real customer data until your team's privacy and data-handling requirements have been reviewed.
