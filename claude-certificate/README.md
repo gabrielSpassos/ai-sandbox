@@ -48,6 +48,9 @@
 ### Permission Modes
 - [Permission Modes](permission-mode.md)
 
+### Vibe Coding
+- [Vibe Coding](vibe-conding.md)
+
 ## Certificates
 - Claude Code 101: https://academy.claude.com/verify/9195b5cc72167fc5b3de7b6fd896c3a1
 
