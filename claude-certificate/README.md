@@ -12,6 +12,7 @@
     - [MCP](#mcp)
     - [Hooks](#hooks)
     - [Permission Modes](#permission-modes)
+    - [Vibe Coding](#vibe-coding)
   - [Certificates](#certificates)
   - [References](#references)
 
