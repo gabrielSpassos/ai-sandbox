@@ -2,6 +2,7 @@
 
 ## 1. Select the proper model
     - cheaper model, with less reasoning may produce less quality outputs
+    - there is LLM routers that evaluate on-the-flight
 
 ### Models Prices
 <!-- MODEL_PRICES_START -->
